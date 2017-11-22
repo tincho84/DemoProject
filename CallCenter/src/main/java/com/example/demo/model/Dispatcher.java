@@ -18,14 +18,8 @@ public class Dispatcher {
 	
 	private static PriorityBlockingQueue<Employee> queue = null;
 	
-	/**
-	 * Lo hago de esta forma pero podría estar en el constructur tranquilamente
-	 */
-	static {
-		initDispatcher();
-	}
-	
 	public Dispatcher() {
+		initDispatcher();
 	}
 	
 	/**
@@ -47,6 +41,9 @@ public class Dispatcher {
 		}		
 	}
 	
+	public static void resetQueue() {
+		queue=null;
+	}
 	
 	/**
 	 * Asigna las llamadas a los empleados disponibles,

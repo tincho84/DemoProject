@@ -16,6 +16,7 @@ Luego de ese tiempo se devuelve un mensaje indicando que no se puede atender mom
 
 - Dar alguna solución sobre qué pasa con una llamada cuando entran más de 10 llamadas concurrentes.
 La cola esta configurada con 10 empleados, luego de esto el comportamiento es similar al punto anterior.
+Se podría cambiar el tipo de colección incrementando la cantidad de empleados para atender y también haciendo el tamaño de la cola dinámico.
 
 También utilizaría alguna librería como log4j para todo lo que es el log de la aplicación.
 

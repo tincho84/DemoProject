@@ -4,17 +4,23 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 
-import org.junit.Before;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class DispatcherParallelTest {
 
 
-	private Dispatcher dis;
+	private static Dispatcher dis;
 
-	@Before
-	public void setUp() throws Exception {
+	@BeforeClass
+	public static void init(){
 		dis = new Dispatcher();
+	}
+
+	@AfterClass
+	public static void clear(){
+		Dispatcher.resetQueue();
 	}
 	
 	@Test

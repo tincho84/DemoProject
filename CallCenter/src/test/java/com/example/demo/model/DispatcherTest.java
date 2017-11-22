@@ -3,20 +3,26 @@ package com.example.demo.model;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
-import org.junit.Before;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 
 public class DispatcherTest {
 
 
-	private Dispatcher dis;
+	private static Dispatcher dis;
 
-	@Before
-	public void setUp() throws Exception {
+	@BeforeClass
+	public static void init(){
 		dis = new Dispatcher();
 	}
-	
+
+	@AfterClass
+	public static void clear(){
+		Dispatcher.resetQueue();
+	}
+
 	@Test
 	public void dispatchCallTest() throws Exception {
 		
