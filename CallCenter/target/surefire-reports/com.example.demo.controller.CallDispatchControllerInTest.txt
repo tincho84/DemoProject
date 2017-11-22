@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: com.example.demo.controller.CallDispatchControllerInTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 2.589 sec <<< FAILURE! - in com.example.demo.controller.CallDispatchControllerInTest
+attend10CallTest2(com.example.demo.controller.CallDispatchControllerInTest)  Time elapsed: 0.26 sec  <<< FAILURE!
+java.lang.AssertionError: 
+Expected: "Hello World!"
+     but: was "{\"timestamp\":1511321197216,\"status\":404,\"error\":\"Not Found\",\"message\":\"No message available\",\"path\":\"/\"}"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at com.example.demo.controller.CallDispatchControllerInTest.attend10CallTest2(CallDispatchControllerInTest.java:55)
+
+attend10CallTest(com.example.demo.controller.CallDispatchControllerInTest)  Time elapsed: 0.012 sec  <<< FAILURE!
+java.lang.AssertionError: 
+Expected: "Hello World!"
+     but: was "{\"timestamp\":1511321197296,\"status\":404,\"error\":\"Not Found\",\"message\":\"No message available\",\"path\":\"/\"}"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at com.example.demo.controller.CallDispatchControllerInTest.attend10CallTest(CallDispatchControllerInTest.java:43)
+
